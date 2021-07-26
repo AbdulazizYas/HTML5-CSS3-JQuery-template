@@ -1,0 +1,441 @@
+/*Start Global Setting*/
+*{
+  box-sizing: border-box;
+  font-family: Jost,Arial
+}
+:root{
+  --mainColor:#1dd1a1;
+}
+*:focus{outline: none}
+.container{
+  width: 1170px;
+  margin: auto;
+}
+/*End Global Setting*/
+
+/*Star NavBar*/
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav{
+  height: 0;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+nav .brand{
+  float: left;
+  width:40%;
+}
+nav .links{
+  float: left;
+  width: 60%;
+  margin-top: 25px;
+  font-weight: bold;
+}
+nav .links li{
+  display: inline-block;
+  padding: 5px 0;
+  margin: 0 20px;
+  letter-spacing: 1.5px;
+  border-bottom: 3px solid trasparent;
+
+}
+
+nav .links li:last-child{margin-right:0;}
+nav .links li a{
+  color: white;
+  text-decoration: none;
+  transition: border-bottom .2s ease-in-out;
+}
+
+nav .links li.active a,
+nav .links li a:hover{
+  color: var(--mainColor);
+  border-bottom: 3px solid var(--mainColor);
+}
+/*End NavBar*/
+
+/*Star Header*/
+header{
+  background: url('../images/headerBg.jpg');
+  color:white;
+  position: relative;
+}
+.overlay{
+  background: rgba(0, 0, 0, 0.5);
+  position:absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height:100%;
+  z-index: 1;
+}
+header .bx-wrapper{
+  border: none;
+  background: none;
+  box-shadow: none;
+  height: 100% ;
+  margin-bottom: 0;
+}
+header .bx-wrapper .bx-viewport{
+  text-align: center;
+  height: 100% !important;
+}
+header .slider div h2{
+  font-size: 3.5em;
+}
+header .slider div h2 span{
+  color: var(--mainColor);
+  text-shadow: 0 2px 4px #333;
+}
+header .slider div p{
+  width: 65%;
+  margin: auto;
+  font-size: 1.3em
+}
+/*End Header*/
+
+/*Start About*/
+.about {
+  padding: 30px 25px;
+}
+.about .ser{
+  float: left;
+  width: 29.33333%;
+  margin-bottom: 30px;
+  margin-right:2%
+}.about .ser:nth-of-type(3n+3){margin-right: 0}
+
+.about .ser i{
+  float: left;
+  width: 7%;
+  margin-top: 5%;
+  color:var(--mainColor);
+  text-shadow: 0 0 5px #DDD;
+}
+.about .ser .info{
+  float: left;
+    width: 75%;
+    margin-left: 18%;
+}
+.about .ser .info h3{
+  color: #545454;
+  text-shadow: 0 1px 2px #CCC;
+}
+.about .ser .info p{
+  text-align: justify;
+  color:#8a8a8a;
+}
+/*End About*/
+
+/*Start Our Tools*/
+.tools{
+  padding: 40px 30px;
+}
+.tools .box:first-child{
+  float:left;
+  width: 29%;
+  margin-right:1%
+}
+.tools .box:first-child p{
+  text-align: justify;
+    font-size: 1.2em;
+    margin-top: 0;
+    line-height: 1.4;
+    color:#8a8a8a;
+}
+.tools .box:not(:first-child){
+  float:left;
+  width: 15.5%;
+  margin-left:2%;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+.tools .box:not(:first-child) .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--mainColor);
+  opacity: 0;
+  transition: opacity .2s ease-in-out,box-shadow .2s ease-in-out;
+}
+.tools .box .heading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  text-align: center;
+  line-height: 183px;
+  color: white;
+  font-size: 1.4em;
+  text-shadow: 0 0 8px #BBB;
+  font-weight: 100;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.tools .box:hover .overlay{opacity: .5;box-shadow: 0 0 8px #999;}
+.tools .box:hover .heading{opacity: 1;}
+.tools .box:not(:first-child) img{width: 100%;height: 100%;}
+
+/*End Our Tools*/
+
+/*Start Testomonials*/
+.testo{
+  background: url('../images/testo1.jpg');
+  background-size: cover;
+  height: 400px;
+  color:white;
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+  padding: 50px 20px;
+}
+.testo .t-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.testo .t-slider .qoute{
+  display: none;
+}
+.testo .t-slider .shown{
+  display: block;
+}
+.testo h2{
+  font-size: 2.5em;
+  z-index: 2;
+}
+.testo .qoute q{
+  position: relative;
+  display: block;
+  margin-top: 80px;
+  font-size: 1.5em;
+  text-shadow: 0 0 6px #444;
+  color: #dadada;
+  z-index: 2;
+}
+.testo .qoute .client{
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 20px;
+  position: relative;
+  color: var(--mainColor);
+  z-index: 2;
+}
+
+/*End Testomonials*/
+
+/*Start Our Projects*/
+.porto{
+  padding: 60px 10px;
+  height: 1000px;
+}
+.porto ul{margin-top: 50px;}
+.porto ul li{
+  display: inline-block;
+  border: 2px solid #adadad;
+  color:#adadad;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.porto ul li.selected{
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+  color:white;
+}
+.porto .gallery{
+  padding: 10px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.porto .gallery .row > div{
+  float: left;
+  width: 32%;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #DDD;
+}.porto .gallery .row:not(:last-of-type) > div{margin-bottom: 2%}
+.porto .gallery .row > div:nth-child(2){margin-left: 2%;margin-right: 2%;}
+.porto .gallery .row > div img{width: 100%;height:100%;border-radius: 10px;}
+.porto .gallery .row > div .over{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mainColor);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  z-index: 1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.porto .gallery .row > div h3{
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-45%,-45%);
+  z-index: 2;
+  color:white;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  border: 4px solid white;
+  border-radius: 5px;
+  text-shadow: 0 0 6px #222;
+  box-shadow: 0 0 6px #888;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .2s ease-in-out,text-shadow .2s ease-in-out,background-color .2s ease-in-out,color .2s ease-in-out;
+}.porto .gallery .row > div .heart{
+  position: absolute;
+  right: 7%;
+  bottom: 10%;
+  z-index: 2;
+  color:white;
+  font-size: 1.2em;
+  text-shadow: 0 0 6px #222;
+  opacity: 0;
+  transition: opacity .2s ease-in-out,text-shadow .2s ease-in-out;
+}.porto .gallery .row > div .heart i{margin-right: 5px;font-size: 1.3em;}
+.porto .gallery .row > div:hover .over{opacity: .6}
+.porto .gallery .row > div:hover h3,
+.porto .gallery .row > div:hover .heart{opacity: 1}
+.porto .gallery .row > div h3:hover{color: var(--mainColor);background-color: white;text-shadow: none}
+#Container .mix{
+	display: none;
+}
+.shuffle li{
+  cursor: pointer;
+}
+/*End Our Projects*/
+
+/*Start Footer*/
+footer{
+  padding: 70px 5px ;
+  background-color: #232323;
+  color:#6c6c6c;
+  overflow: hidden;
+}
+footer .col{
+  width: 24.25%;
+  float: left;
+}footer .col:not(.contact){margin-right: 1%;}
+footer .col h2{
+  color: #EEE;
+}
+footer .col p{
+  line-height: 1.5;
+  margin:40px 0
+}
+footer .col i{
+  width: 40px;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 8px 0;
+  text-align: center;
+  border: 2px solid #6c6c6c;
+  border-radius: 5px;
+  cursor: pointer;
+}footer .col i:nth-of-type(2){margin: 0 5px 40px 5px}
+footer .tags span{
+  display: inline-block;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 2px solid #6c6c6c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer .cate ul{padding-right: 20px;}
+footer .cate ul li{
+  padding: 15px;
+  border-bottom: 2px solid #6c6c6c;
+}
+footer .contact input,
+footer .contact textarea{
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+  background-color: #383838;
+  color:#EEE;
+  padding: 12px 8px;
+  border-radius: 5px;
+}::placeholder{color: #BBB}
+footer .contact textarea{
+  height: 200px;
+  resize: none;
+}
+footer .contact input[type='submit']{background-color: #0e0e0e;cursor: pointer;transition: background-color .2s ease-in,color .2s ease-in}footer .contact input[type='submit']:hover{background-color: white;color:#0e0e0e}
+/*End Footer*/
+
+/*Start My Framework*/
+.clearfix{clear: both;}
+.special-heading{
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: normal;
+  text-shadow: 0 0 5px #DDD;
+  opacity: 1;
+}
+.special-heading::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  top: 30px;
+  left: 0;
+  border: 1.25px solid #111;
+}
+.special-heading-c-white{
+  position: relative;
+  margin-bottom: 30px;
+  text-shadow: 0 0 6px #444;
+}
+.special-heading-c-white::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 60px;
+  top: 50px;
+  left: 41%;
+  box-shadow: 0 0 6px #444;
+  background-color: white;
+  border: 1.25px solid white;
+}
+.separator{
+  display: block;
+  border: 1px solid #EEE;
+  margin: 50px 20px;
+}
+
+/*End My Framework*/
